@@ -1,0 +1,283 @@
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  60% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  60% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+}
+
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #4a4b5e;
+}
+
+a {
+  text-decoration: none;
+  color: #4a4b5e;
+}
+
+.page {
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(#af67e9, #6565e7);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+
+.page .main {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 10rem 1.5rem;
+  max-width: 920px;
+  background-color: white;
+  border-radius: 1.25rem;
+  -webkit-box-shadow: 0rem 3.25rem 2.375rem -1.25rem rgba(0, 0, 0, 0.45);
+          box-shadow: 0rem 3.25rem 2.375rem -1.25rem rgba(0, 0, 0, 0.45);
+}
+
+@media (min-width: 64em) {
+  .page .main {
+    margin: auto;
+    min-width: 57.5rem;
+  }
+}
+
+.page .main-image {
+  position: absolute;
+  top: -9rem;
+  left: 46%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-image: url(../../images/illustration-woman-online-mobile.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17rem;
+  width: 100%;
+  max-width: 17rem;
+}
+
+@media (min-width: 40em) {
+  .page .main-image {
+    min-height: 24rem;
+    max-width: 24rem;
+    top: -12.875rem;
+  }
+}
+
+.page .main-image::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 55%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-image: url(../../images/bg-pattern-mobile.svg);
+  background-size: 89%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17rem;
+  width: 100%;
+  max-width: 17rem;
+}
+
+@media (min-width: 40em) {
+  .page .main-image::before {
+    min-height: 24rem;
+    max-width: 24rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .page .main-image {
+    background-image: url(../../images/illustration-woman-online-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: -4.625rem center;
+    top: 48.5%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0%;
+    min-height: 22rem;
+    width: 100%;
+    max-width: 28.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .page .main-image::before {
+    content: "";
+    position: absolute;
+    top: -68%;
+    left: -14%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-image: url(../../images/bg-pattern-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 200%;
+    width: 200%;
+    max-width: 200%;
+  }
+  .page .main-image::after {
+    content: "";
+    position: absolute;
+    left: -19%;
+    top: 40%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-image: url(../../images/illustration-box-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 11rem;
+    width: 100%;
+    max-width: 11rem;
+    -webkit-animation: bounce 2s infinite;
+            animation: bounce 2s infinite;
+  }
+}
+
+.page .main-content {
+  padding: 7.25rem 1.5rem 3rem 1.5rem;
+}
+
+@media (min-width: 40em) {
+  .page .main-content {
+    padding: 9.25rem 5rem 5rem 5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .page .main-content {
+    margin-left: 50%;
+    padding: 2.875rem 1rem 5.25rem 1rem;
+    max-width: 22.875rem;
+  }
+}
+
+.page .main-content h1 {
+  font-size: 1.75rem;
+  color: #1d1e35;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin: 0;
+  font-weight: 700;
+}
+
+@media (min-width: 64em) {
+  .page .main-content h1 {
+    text-align: left;
+  }
+}
+
+.page .main-content .faq {
+  padding: 1.25rem 0 1rem 0;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.page .main-content .faq .ques {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page .main-content .faq .ques a {
+  font-size: 0.8125rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.page .main-content .faq .ques a:hover {
+  color: #f47c57;
+}
+
+.page .main-content .faq .ques .btn {
+  height: 0.375rem;
+  width: 0.625rem;
+  background-image: url("../../images/icon-arrow-down.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+
+.page .main-content .faq .ques .show {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.page .main-content .faq .ans {
+  color: #787887;
+  max-height: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  font-size: 0.6875rem;
+  padding-right: 1.125rem;
+}
+
+.page .main-content .faq .show {
+  max-height: 4rem !important;
+  padding-top: 0.875rem;
+}
+
+.page .main-content .faq .active {
+  font-weight: 700;
+  color: #1d1e35;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,208 @@
+.page{
+    height: 100%;
+    background-image: linear-gradient($soft_violet, $soft_blue); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+    .main{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 12rem 1.5rem ;
+        max-width: 920px;
+        background-color:$white;
+        border-radius: 1.25rem;
+        box-shadow: 0rem 3.25rem 3.375rem -1.25rem rgba(0, 0, 0, 0.45);
+    
+        @include bk-up("large"){
+            margin: auto;
+            min-width: 57.5rem;
+        }
+    
+        &-image{
+            position: absolute;
+            top: -9rem;
+            left: 45%;
+            transform: translateX(-50%);
+            background-image: url(../../images/illustration-woman-online-mobile.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height:17rem;
+            width: 100%;
+            max-width: 17rem;
+    
+            @include bk-up("medium"){
+                min-height:24rem;
+                max-width: 24rem;
+                top: -12.875rem;
+            }
+    
+            &::before{
+                content: "";
+                position: absolute;
+                top: 23%;
+                left: 55%;
+                transform: translateX(-50%);
+                background-image: url(../../images/bg-pattern-mobile.svg);
+                background-size: 89%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                min-height:17rem;
+                width: 100%;
+                max-width: 17rem;
+    
+                @include bk-up("medium"){
+                    min-height:24rem;
+                    max-width: 24rem;
+    
+                }
+    
+            }
+    
+            @include bk-up("large"){
+    
+                background-image: url(../../images/illustration-woman-online-desktop.svg);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: -4.625rem center;
+                top: 48.5%;
+                transform: translateY(-50%);
+                left: 0%;
+                min-height:22rem;
+                width: 100%;
+                max-width: 28.5rem;
+                object-fit: cover;
+    
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: -68%;
+                    left: -14%;
+                    transform: translateX(-50%);
+                    background-image: url(../../images/bg-pattern-desktop.svg);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    height:200%;
+                    width: 200%;
+                    max-width: 200%;
+                }
+    
+    
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: -19%;
+                    top: 40%;
+                    transform: translateX(-50%);
+                    background-image: url(../../images/illustration-box-desktop.svg);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    min-height:11rem;
+                    width: 100%;
+                    max-width: 11rem;
+                    animation: bounce 2s infinite;
+                }
+    
+             
+    
+                
+            }
+        }
+    
+        &-content{
+            padding: 7.25rem 1.5rem 3rem 1.5rem;
+    
+            @include bk-up("medium"){
+                padding: 9.25rem 5rem 5rem 5rem;
+            }
+    
+            @include bk-up("large"){
+                margin-left: 50%;
+                padding: 2.875rem 1rem 5.25rem 1rem;
+                max-width: 22.875rem;
+            }
+    
+            h1{
+                font-size: 1.75rem;
+                color: $very_dark_desaturated_blue;
+                text-align: center;
+                padding: 1.5rem 0;
+                margin: 0;
+                font-weight: 700;
+    
+                @include bk-up("large"){
+                    text-align: left;
+                }
+    
+            }
+    
+            .faq{
+                padding: 1.25rem 0 1rem 0;
+                border-bottom: 1px solid $light_grayish_blue;
+    
+                .ques{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    a{
+                        font-size: 0.8125rem;
+                        transition: all 200ms ease-in-out ;
+    
+                        &:hover{
+                            color: $soft_red;
+                        }
+                        
+    
+                    }
+    
+                    .btn{
+                        height: 0.375rem;
+                        width: 0.625rem;
+                        background-image:url("../../images/icon-arrow-down.svg");
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        transition: all 400ms ease;
+                        cursor: pointer;
+                    }
+    
+                    .show{
+                        transform: rotate(-180deg);
+                   }
+                   
+                }
+    
+                .ans{
+                    color: $dark_grayish_blue;
+                    max-height: 0;
+                    line-height: 1.5;
+                    overflow: hidden;
+                    transition: all 400ms ease;
+                    font-size: 0.6875rem;
+                    padding-right: 1.125rem;
+                    
+                    
+                }
+    
+                .show{
+                    max-height: 4rem !important;
+                    padding-top: 0.875rem;
+                    
+                }
+    
+                .active{
+                    font-weight: 700;
+                    color: $very_dark_desaturated_blue;
+                }
+    
+    
+            }
+    
+        }
+    }
+    
+}
